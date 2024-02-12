@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeekdayComponent } from './weekday.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('WeekdayComponent', () => {
   let component: WeekdayComponent;
@@ -8,7 +9,8 @@ describe('WeekdayComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WeekdayComponent]
+      declarations: [WeekdayComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     });
     fixture = TestBed.createComponent(WeekdayComponent);
     component = fixture.componentInstance;
