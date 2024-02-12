@@ -1,0 +1,32 @@
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  > :nth-child(1) {
+    background-color: #3498db;
+  }
+
+  > :nth-child(2) {
+    background-color: #e74c3c;
+  }
+
+  > :nth-child(3) {
+    background-color: #2ecc71;
+  }
+
+  > :nth-child(4) {
+    background-color: #f39c12;
+  }
+
+  > :nth-child(5) {
+    background-color: #9b59b6;
+  }
+
+  > :nth-child(6) {
+    background-color: #1abc9c;
+  }
+
+  > :nth-child(7) {
+    background-color: #e67e22;
+  }
+}
