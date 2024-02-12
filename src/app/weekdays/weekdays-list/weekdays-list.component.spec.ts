@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WeekdaysListComponent } from './weekdays-list.component';
+import {
+  WeekdaysListComponent,
+  daysOfTheWeek,
+} from './weekdays-list.component';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { WeekdayComponent } from '../weekday/weekday.component';
@@ -21,9 +24,10 @@ describe('WeekdaysListComponent', () => {
 
   it('should create', () => {
     const weekdayListComponent = new WeekdaysListComponent();
+    component.weekdays = daysOfTheWeek;
     expect(component).toBeTruthy();
     expect(weekdayListComponent.weekdays)
       .withContext('This is my context')
-      .toBe([]);
+      .toEqual([]);
   });
 });

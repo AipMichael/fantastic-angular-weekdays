@@ -2,6 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeekdayComponent } from './weekday.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {
+  daysOfTheWeek,
+  setIsToday,
+} from '../weekdays-list/weekdays-list.component';
 
 describe('WeekdayComponent', () => {
   let component: WeekdayComponent;
@@ -18,6 +22,7 @@ describe('WeekdayComponent', () => {
   });
 
   it('should create', () => {
+    component.weekday = { name: 'Tuesday', isToday: setIsToday(2) };
     expect(component).toBeTruthy();
   });
 });

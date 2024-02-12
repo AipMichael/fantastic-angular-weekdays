@@ -3,12 +3,12 @@ import { Weekday } from 'src/types';
 
 const today = new Date().getDay();
 
-const setIsToday = (dayOfWeek: number) => {
+export const setIsToday = (dayOfWeek: number) => {
   if (dayOfWeek === today) return true;
   return false;
 };
 
-const daysOfTheWeek: Weekday[] = [
+export const daysOfTheWeek: Weekday[] = [
   { name: 'Monday', isToday: setIsToday(1) },
   { name: 'Tuesday', isToday: setIsToday(2) },
   { name: 'Wednesday', isToday: setIsToday(3) },
